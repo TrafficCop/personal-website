@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 };
 
                 const mouseMoveHandler = function (e) {
+			window.getSelection().removeAllRanges(); 
                     let dx = e.clientX - pos.x;
                     let dy = e.clientY - pos.y;	
 					const isMobile = navigator.userAgentData.mobile;
