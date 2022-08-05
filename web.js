@@ -46,9 +46,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     let dy = e.clientY - pos.y;	
 					const isMobile = navigator.userAgentData.mobile;
 					let horiz = Math.abs(dx);
-					if (isMobile) {
-						horiz = horiz * 10;
-					}
 						if (anew) {
 							if (horiz > Math.abs(dy)) {
 								horizontal = true;
