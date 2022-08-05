@@ -46,21 +46,20 @@ document.addEventListener('DOMContentLoaded', function () {
                     let dy = e.clientY - pos.y;	
 					const isMobile = navigator.userAgentData.mobile;
 					let horiz = Math.abs(dx);
-					if (isMobile) {
-						horiz = Math.abs(dx)*10;
-					}
-					if (anew) {
-						if (horiz > Math.abs(dy)) {
-							horizontal = true;
-						} else {
-							horizontal = false;
+					if (!isMobile) {
+						if (anew) {
+							if (horiz > Math.abs(dy)) {
+								horizontal = true;
+							} else {
+								horizontal = false;
+							}
+							anew = false;
 						}
-						anew = false;
-					}
-					if (horizontal) {
-						dy = 0;
-					} else {
-						dx = 0;
+						if (horizontal) {
+							dy = 0;
+						} else {
+							dx = 0;
+						}
 					}
                     // Scroll the element
                     ele.scrollTop = pos.top - dy;
