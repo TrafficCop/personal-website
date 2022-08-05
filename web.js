@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 };
 
                 const mouseMoveHandler = function (e) {
-                    // How far the mouse has been moved
+                    e.preventDefault();
                     let dx = e.clientX - pos.x;
                     let dy = e.clientY - pos.y;	
 					
