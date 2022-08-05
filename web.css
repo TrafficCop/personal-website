@@ -13,6 +13,10 @@ body {
 	overflow-x: hidden;
 }
 
+.main-scroller > * {
+	touch-action: pan-x pan-y;
+}
+
 .sidebar {
 	z-index: 11;
 	left: 0;
