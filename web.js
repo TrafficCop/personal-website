@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     let dy = e.clientY - pos.y;	
 					
 					if (anew) {
-						if (Math.abs(dx) > Math.abs(dy)) {
+						if (Math.abs(dx)*4 > Math.abs(dy)) {
 							horizontal = true;
 						} else {
 							horizontal = false;
