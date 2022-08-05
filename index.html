@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="web.css"></link>
+		<script src="web.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+	</head>
+	<body>
+		<div class="sidebar">
+			<div id="bars-container">
+					<a class="bar" id="first" href="#front"><object data="./Components/Bar.svg"></object></a>
+					<a class="bar" id="second" href="#middle"><object data="./Components/Bar.svg"></object></a>
+					<a class="bar" id="third" href="#back"><object data="./Components/Bar.svg"></object></a>
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="main-scroller snaps-inline">
+				<div id="front" class="main-element front">
+				<canvas id="backgd"></canvas>
+				<div id="greet">hi, i'm 
+				<span class="swap-parent" style="font-weight: 700">
+					<span class="swap">
+					<span class="one">j</span>
+					<span class="two">a</span>
+					<span class="three">c</span>
+					<span class="four">k</span>
+					</span>
+					<img class="photo" src="./Components/photo.png"></img>
+				</span>
+				</div>
+				<div id="graphic"><object data="./Components/Arrow.svg"></object></div>
+				<!--<div id="graphic"><object data="./Components/Rectangles.svg"></object></div>-->
+				
+				</div>
+				<div id="middle" class="main-element middle back"><div id="projdet"></div> <div class="heading">
+					Experience
+					</div>
+					<div class="subhead">
+						Selected Projects
+					</div>
+					<div class="cardcontainer cards">
+						<a><div class="banner attLogger"></div><div class="name"><span class="m">Attendance Manager</span>
+							<div class="projdesc">
+								An attendance logger and database manager made for my local Fullerton Chinese School.
+								Uses: PostgresSQL, React, NodeJS, Express	
+							</div>
+							<button class="link">Learn More!</button>
+							</div>
+						</a>
+						<a><div class="banner website"></div><div class="name"><span class="m">My Website</span>
+							<div class="projdesc">
+								This website was my first dabble into front end design and development. 
+								Uses: HTML, CSS, Javascript
+							</div>
+							</div>
+						</a>
+						<a><div class="banner electroman"></div><div class="name"><span class="m">Electroman</span>
+							<div class="projdesc">
+								This was a game I designed and wrote from scratch back in high school. 
+								Uses: Java
+							</div>
+							<button class="link">Learn More!</button>
+							</div>
+						</a>
+					</div>
+				</div>	
+					<div id="back" class="main-element back last"><div id="abt" class="heading">About</div>
+						<div class="text">
+							I'm a software engineer who loves nothing more (that is, besides my cat) than seeing my ideas come to life. 							
+							As a computer science student at Stanford University, I'm still expanding my experiences and am always looking
+							for an opportunity to become involved in machine learning and operating systems technologies.
+						</div>
+						<div class="subhead">CS Coursework (Stanford)</div>
+						<div class="experience-cards courses">
+							<a href="http://web.stanford.edu/class/cs109/">
+								<div class="title"> CS109</div>
+								<div class="description">General statistics and introductory machine learning/neural networks</div>
+							</a>
+							<a href="http://web.stanford.edu/class/cs107/">
+								<div class="title">CS107</div> 
+								<div class="description">C, data representation, machine code, and more</div>
+							</a>
+							<a href="https://web.stanford.edu/class/cs103/">
+								<div class="title">CS103</div> 
+								<div class="description">Computer science theory and discrete mathematics</div>
+							</a>
+							<a href="https://stanfordpython.com/#/">
+								<div class="title">CS41</div> 
+								<div class="description">A course on everything python</div>
+							</a>
+							<a href="https://web.stanford.edu/class/cs106b/">
+								<div class="title">CS106B</div> 
+								<div class="description">Abstract data structures and algorithms</div>
+							</a>
+						</div>
+						<div class="subhead">Skills</div>
+						<div class="experience-cards skills">
+							<a><object data="./Components/Python.svg"></object></a>
+							<a><object data="./Components/C.svg"></object></a>
+							<a><object data="./Components/C++.svg"></object></a>
+							<a><object data="./Components/Java.svg"></object></a>
+							<a><object data="./Components/React.svg"></object></a>
+							<a><object data="./Components/PSQL.svg"></object></a>
+						</div>
+						<div id="pad"></div>
+					</div>
+			</div>
+		</div>
+	</body>
+</html>
