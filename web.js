@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 };
 
                 const mouseMoveHandler = function (e) {
-                    e.preventDefault();
                     let dx = e.clientX - pos.x;
                     let dy = e.clientY - pos.y;	
 					
