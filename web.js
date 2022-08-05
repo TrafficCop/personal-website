@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					const isMobile = navigator.userAgentData.mobile;
 					let horiz = Math.abs(dx);
 					if (isMobile) {
-						horiz = horiz*60;
+						horiz = horiz*200;
 					}
 						if (anew) {
 							if (horiz > Math.abs(dy)) {
