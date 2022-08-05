@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     let dy = e.clientY - pos.y;	
 					const isMobile = navigator.userAgentData.mobile;
 					let horiz = Math.abs(dx);
+					if (!isMobile) {
 						if (anew) {
 							if (horiz > Math.abs(dy)) {
 								horizontal = true;
@@ -62,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
 						} else {
 							dx = 0;
 						}
+					}
                     // Scroll the element
                     ele.scrollTop = pos.top - dy;
 					if (!(isInViewport(lst) && dx < 0)) {
