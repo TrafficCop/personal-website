@@ -20,9 +20,9 @@ document.addEventListener('DOMContentLoaded', function () {
 				}
 				
                 const mouseDownHandler = function (e) {
-			window.getSelection().removeAllRanges(); 
-			e.target.setPointerCapture(e.pointerId)
 			e.preventDefault();
+			e.target.setPointerCapture(e.pointerId)
+			
 					vert.style.cursor = 'grabbing';
                     ele.style.cursor = 'grabbing';
                     ele.style.userSelect = 'none';
