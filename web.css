@@ -7,19 +7,10 @@
         font-size: 100%;
         vertical-align: baseline;
         background: transparent;
-	
-	user-select: none;
-      -moz-user-select: none;  
-      -webkit-user-select: none;  
-      -ms-user-select: none;
     }
 
 body {
 	overflow-x: hidden;
-}
-
-.main-scroller > * {
-	touch-action: none;
 }
 
 .sidebar {
@@ -56,6 +47,13 @@ a {
 	grid-auto-columns: 100%;
 	gap: 0;
 	overscroll-behavior-inline: contain;
+}
+
+.main-scroller > * {
+	user-select: none;
+      -moz-user-select: none;  
+      -webkit-user-select: none;  
+      -ms-user-select: none;
 }
 
 .main-element {
@@ -125,6 +123,16 @@ a {
 	animation-iteration-count: infinite;
 }
 
+.graphic2 {
+	display: inline-block !important;
+	width: 100px !important;
+	height: 100px !important;
+	float: right !important;
+	top: 0 !important;
+	transform: translateX(0) !important;
+	animation-name: point !important;
+}
+
 @keyframes point {
 	0% {
 	}
@@ -166,9 +174,6 @@ a {
 	}
 	.body {
 		overflow-x: auto !important;
-	}
-	.projdesc {
-		width: 80% !important;
 	}
 	.middle > * {
 		left: 10px !important;
@@ -309,7 +314,7 @@ a {
 	display: inline-block;
 	width: 90%;
 	float: left;
-	height: 90%;
+	height: min-content;
 	position: relative;
 	vertical-align: top;
 	font-family: 'Montserrat';
@@ -323,7 +328,7 @@ a {
 	transition: all 500ms ease;
 }
 
-.name:hover > div.projdesc {
+.name:hover > .projdesc {
 	color: #FFFFFF;
 	transform: translateY(-7em);
 	transition-delay: 250ms;
@@ -346,7 +351,7 @@ a {
 }
 
 .name:hover > button.link {
-	transform: translateY(-12em);
+	transform: translateY(-6.5em);
 	transition-delay: 250ms;
 }
 
@@ -358,14 +363,17 @@ a {
 	.banner {
 		display: none;
 	}
-	.name, .projdesc {
+	.name {
 		width: 100%;
 	}
+	.projdesc {
+		width: 95%;
+	}
 	.cards > a {
-		width: 66% !important;
+		width: 100% !important;
 	}
 	.cards {
-		width: 800px !important;
+		width: 99vw !important;
 	}
 }
 
@@ -397,6 +405,12 @@ a {
 	grid-auto-rows: 1fr;
 	grid-column-gap: 1em;
 	grid-row-gap: 1em;
+}
+
+@media (max-width: 480px) {
+	.experience-cards {
+		grid-template-columns: repeat(2, 1fr) !important;
+	}
 }
 
 .experience-cards > a {
