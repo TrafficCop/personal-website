@@ -44,9 +44,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 const mouseMoveHandler = function (e) {
                     let dx = e.clientX - pos.x;
                     let dy = e.clientY - pos.y;	
-					
+					const isMobile = navigator.userAgentData.mobile;
+					let horiz = Math.abs(dx);
+					if (isMobile) {
+						horiz = Math.abs(dx)*10;
+					}
 					if (anew) {
-						if (Math.abs(dx)*4 > Math.abs(dy)) {
+						if (horiz > Math.abs(dy)) {
 							horizontal = true;
 						} else {
 							horizontal = false;
