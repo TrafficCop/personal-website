@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					const isMobile = navigator.userAgentData.mobile;
 					let horiz = Math.abs(dx);
 					if (!isMobile) {
+						alert('W');
 						if (anew) {
 							if (horiz > Math.abs(dy)) {
 								horizontal = true;
